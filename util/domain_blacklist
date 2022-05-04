@@ -1,0 +1,68 @@
+#Global web domain regexp blacklist
+#A "$" is always added to the right side before regexp searching the hostname (or a suffix thereof)
+wikipedia\.org #downloaded separately using wiki2corpus (http://corpus.tools/wiki/wiki2corpus)
+# not much nice text:
+google\.com #not much nice text
+yahoo\.com #not much nice text
+bing\.com #not much nice text
+baidu\.com #not much nice text
+youtube\.com #not much nice text
+youtu\.be #not much nice text
+# social networks (manual list):
+badoo\.com #socnet
+# social networks (auto-updatable): wget -q -O - 'https://raw.githubusercontent.com/StevenBlack/hosts/cf5d6306d2c83a37fb1ec00f704b4f2eb68d4f5b/extensions/social/hosts' | awk -F'[ .]' '/^#/{next} NF>=6{HOST=$(NF-1)"."$(NF);if(HOST in SEEN)next;SEEN[HOST]=1;gsub(/\./,"\\.",HOST);print HOST" #socnet"}'
+facebook\.com #socnet
+tfbnw\.net #socnet
+instagram\.com #socnet
+fbsbx\.com #socnet
+fbcdn\.net #socnet
+facebook\.net #socnet
+edgekey\.net #socnet
+appspot\.com #socnet
+facebook\.de #socnet
+facebook\.fr #socnet
+fb\.com #socnet
+fb\.me #socnet
+akamaihd\.net #socnet
+fbcdn\.com #socnet
+online-metrix\.net #socnet
+edgesuite\.net #socnet
+messages-facebook\.com #socnet
+cdninstagram\.com #socnet
+thefacebook\.com #socnet
+whatsapp\.com #socnet
+twitter\.com #socnet
+twimg\.com #socnet
+licdn\.com #socnet
+linkedin\.com #socnet
+myspace\.com #socnet
+pinterest\.com #socnet
+tumblr\.com #socnet
+yahoo\.com #socnet
+google\.com #socnet
+# machine translation or machine generated
+vessoft\.com #machine translation
+transposh\.org #machine translation
+kondifitting\.com #machine translation
+ecowoman[a-z0-9\-]*\..* #machine translation
+tun\.com #machine translation
+unionpedia\.org #machine generated
+amazinghope\.net #machine generated
+motion-free\.website #machine generated
+tipings\.com #machine generated
+medadvicees\.com #machine translation
+simptreat\.com #machine translation
+medhelpsis\.com #machine translation
+womensecr\.com #machine translation
+upplady\.com #machine translation
+yumpu\.com #machine translation
+urantia\.org #machine translation
+# no good text
+video-chat\.in
+abbreviationfinder\.org
+# poor TLDs:
+\.tk #TLD plagued with phishing and spam (see .tk on Wikipedia)
+\.xxx #porn
+ceoemail\.com #don't want to be crawled
+localiser-ip\.com #no nice text, large pages extra slow to process
+glosbe\.com #dictionary

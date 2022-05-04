@@ -1,0 +1,7 @@
+Sample plaintext in the target language should be placed in this directory.
+The file name must be the same as the language, e.g. "English".
+For example, you can use texts from general English web documents and English
+Wikipedia articles. The recommended size of the file is at least 50 kB.
+Make sure the text is really clean and representing the language well --
+e.g. no Greek letters or references in square brackets in Wikipedia articles,
+no encoding errors, no web garbage such as URIs.
